@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  div.container.text-center.w-50.bg-info.p-5.mb-5
+    h1.text-center.pb-3 Hi #{admindata}
+    form(action="listbookspost" method="post")
+      .form-group
+        label(for="book_title") Book Title:
+        input.form-control(type="text" id="book_title" name="book_title" required)
+      .form-group
+        label(for="isbn") ISBN:
+        input.form-control(type="text" id="isbn" name="isbn" required)
+      .form-group
+        label(for="genre") Genre:
+        input.form-control(type="text" id="genre" name="genre" required)
+      .form-group
+        label(for="author") Author:
+        input.form-control(type="text" id="author" name="author" required)
+      .form-group
+        label(for="publishing_year") Publishing Year:
+        input.form-control(type="text" id="publishing_year" name="publishing_year" required)
+      .form-group
+        label(for="copies") No.of Copies:
+        input.form-control(type="number" id="copies" name="copies" required)
+      .form-group
+        label(for="cover_image") Cover Image:
+        input.form-control(type="file" id="cover_image" name="cover_image" accept="cover_image/*" required)
+      .form-group
+        button.btn.btn-dark(type="submit") Add Book

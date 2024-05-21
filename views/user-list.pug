@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  div.container
+    h1.text-light.text-center Welcome Admin #{admindata}
+    h2.text-danger.text-center Users List
+    table.table.table-striped.table-hover.table-dark
+      thead
+        tr
+          th Name
+          th Email
+          th Photo
+          th Actions
+      tbody
+        each user in users
+          tr
+            td= user.user_name
+            td= user.user_email
+            td= user.user_photo
+            td
+              a.btn.btn-primary(href=`user/${user.user_id}/edit`) Edit
+              form(action=`user/${user.user_id}/delete` method="POST")
+                button.btn.btn-danger(type="submit") Delete
+    a.btn.btn-secondary(href=`/admin/admin-home`) Back
+    a.btn.btn-danger(href=`/admin/admin-logout`) Logout

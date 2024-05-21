@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  div.container
+    h1 Welcome #{admindata}
+    table.table.table-striped.table-hover.table-dark
+      thead
+        tr
+          th ISBN
+          th Book Title
+          th Author
+          th Cover Photo
+          th Genre
+          th Publishing Year 
+          th No.of Copies 
+          th Actions
+      tbody
+        each bk in book
+          tr
+            td= bk.isbn
+            td= bk.book_title
+            td= bk.author
+            td= bk.cover_image
+            td= bk.genre
+            td= bk.publishing_year
+            td= bk.copies
+            td
+              a.btn.btn-primary(href=`/books/${bk.isbn}/edit`) Edit
+              form(action=`/books/${bk.isbn}/delete` method="POST")
+                //- input(type="hidden" name="_method" value="DELETE")
+                button.btn.btn-danger(type="submit") Delete
+    a.btn.btn-primary(href=`/admin/admin-home`) Back
+    a.btn.btn-danger(href="/admin/admin-logout") Logout

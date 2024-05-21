@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.container.text-center.w-50.bg-info.p-5
+    h1.pb-2 Edit Book
+    form(action=`/books/${book.isbn}/edit` method="POST")
+      label(for="book_title") Book Title:
+      input.form-control(type="text" id="book_title" name="book_title" value=book.book_title)
+      br
+      label(for="author") Author:
+      input.form-control(type="text" id="author" name="author" value=book.author)
+      br
+      label(for="genre") Genre:
+      input.form-control(type="text" id="genre" name="genre" value=book.genre)
+      br
+      label(for="publishing_year") Publishing Year:
+      input.form-control(type="text" id="publishing_year" name="publishing_year" value=book.publishing_year)
+      br
+      label(for="copies") No. of Copies:
+      input.form-control(type="number" id="copies" name="copies" value=book.copies)
+      br
+      button.btn.btn-dark.w-25(type="submit") Update

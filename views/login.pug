@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container.text-center.w-25.bg-info.p-5
+    h1 Login
+    form(action="login" method="post")
+      label(for="user_name") UserName:
+      input.form-control(type="text" id="user_name" name="user_name" required)
+      br
+      label(for="user_password") Password:
+      input.form-control(type="text" id="user_password" name="user_password" required)
+      br
+      button.btn.btn-dark(type="submit") Login

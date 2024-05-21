@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container.text-center.w-50.bg-info.p-5
+    h1.pb-2 Edit Admin
+    form(action=`/admin/${admin.admin_id}/edit` method="POST")
+      label(for="admin_name") Admin Name:
+      input.form-control(type="text" id="admin_name" name="admin_name" value=admin.admin_name)
+      br
+      label(for="admin_email") Email:
+      input.form-control(type="email" id="admin_email" name="admin_email" value=admin.admin_email)
+      br
+      button.btn.btn-dark.w-25(type="submit") Update

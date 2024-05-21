@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div.container
+    h1.text-light.text-center Welcome Admin #{admindata}
+    table.table.table-striped.table-hover.table-dark
+      thead
+        tr
+          th Name
+          th Email
+          th Photo
+          th Actions
+      tbody
+        each adm in adminlisting
+          tr
+            td= adm.admin_name
+            td= adm.admin_email
+            td= adm.admin_photo
+            td
+              a.btn.btn-primary(href=`/admin/${adm.admin_id}/edit`) Edit
+              form(action=`/admin/${adm.admin_id}/delete` method="POST")
+                button.btn.btn-danger(type="submit") Delete
+    a.btn.btn-secondary(href=`/admin/admin-home`) Back
+    a.btn.btn-danger(href=`/admin/admin-logout`) Logout

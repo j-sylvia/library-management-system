@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+  h1.text-center.text-light.font-italic.mx-5.py-2 Welcome #{admindata}
+
+  div.container.p-5
+    div.row
+      div.col.text-center.bg-dark.py-5.m-5  
+        a.btn.btn-outline-primary.m-2(href="/admin") View Admin List
+        a.btn.btn-outline-primary.m-2(href="/admin/user") View User List
+        //- a.btn.btn-outline-primary.m-2(href="/admin/create") Create New Admin
+      div.col.text-center.bg-dark.py-5.m-5 
+        a.btn.btn-outline-info.m-2(href="/books/listbooksadmin") View Book List
+        a.btn.btn-outline-info.m-2(href="/admin/add-books") Add Book
+    a.btn.btn-outline-info(href=`/`) Back
+    a.btn.btn-outline-warning.m-2(href="/admin/admin-logout") Logout

@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+  body
+    nav(class="navbar navbar-expand-lg navbar-dark bg-info mb-5")
+      div.container-fluid
+        a(class="navbar-brand font-weight-bold" href="/")  LIBRARY MANAGEMENT SYSTEM
+        //- button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+        //-   span(class="navbar-toggler-icon")
+        //- div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+        //-   div(class="navbar-nav")
+        //-     a(class="nav-link active" aria-current="page" href="#") Home
+        //-     a(class="nav-link" href="/books/borrowed-books") Borrowed Books
+        //-     a(class="nav-link" href="#") Login
+    block content

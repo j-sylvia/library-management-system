@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1.text-center.text-light.font-italic.mx-5.py-2 Welcome to #{title}
+  div.container.p-5
+    div.row
+      div.col.text-center.bg-dark.py-5.m-5 
+        h3.text-light.text-center User 
+        a.btn.btn-outline-primary.m-2(href="users/signin") User Login
+        a.btn.btn-outline-primary.m-2(href="users/signup") Create a new user
+      div.col.text-center.bg-dark.py-5.m-5 
+        h3.text-center.text-light Admin
+        a.btn.btn-outline-info.m-2(href="admin/admin-login") Admin Login
+        a.btn.btn-outline-info.m-2(href="admin/create") Create a new admin

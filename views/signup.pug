@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  div.container.text-center.w-50.bg-info.p-5
+    h1.pb-2 Sign Up
+    form(action="create" method="post")
+      label(for="user_name") User Name:
+      input.form-control(type="text" id="user_name" name="user_name" )
+      br
+      label(for="user_password") Password:
+      input.form-control(type="text" id="user_password" name="user_password")
+      br
+      label(for="user_gender") Gender:  
+      input(type="radio" id="male" value="male" name="user_gender")
+      label(for="male") Male 
+      input(type="radio" id="female" value="female" name="user_gender")
+      label(for="female") Female 
+      br
+      label(for="user_email") Email:
+      input.form-control(type="text" id="user_email" name="user_email" )
+      br
+      label(for="user_photo") Photo:
+      input(type="file" id="user_photo" name="user_photo" )
+      br
+      label(for="user_phone") Phone:
+      input.form-control(type="number" id="user_phone" name="user_phone" )
+      br
+      button.btn.btn-dark.w-25(type="submit") Sign Up

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.container.text-center.w-25.bg-info.p-5
+    h1.pb-3 Admin Login
+    form(action="admin-login" method="post")
+      label(for="admin_name") Admin Username:
+      input.form-control(type="text" id="admin_name" name="admin_name" required)
+      br
+      label(for="user_password") Admin Password:
+      input.form-control(type="text" id="admin_password" name="admin_password" required)
+      br
+      button.btn.btn-dark.w-50(type="submit") Login
